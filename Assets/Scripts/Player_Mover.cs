@@ -49,6 +49,7 @@ public class Player_Mover : MonoBehaviour
 
         animator.SetFloat("Horizontal", horizontalAnim);
         animator.SetFloat("Vertical", verticalAnim);
+        animator.SetBool("Dash", isDashing);
 
         //For dash mechanic
         if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift))
