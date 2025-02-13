@@ -11,7 +11,7 @@ public class Player_Mover : MonoBehaviour
 
     float currentSpeed;
     float timer = 0;
-    static bool isDashing = false;
+    public bool isDashing = false;
     Rigidbody2D rb;
     Vector2 input;
 
