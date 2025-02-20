@@ -6,8 +6,9 @@ using UnityEngine;
 public class Player_Mover : MonoBehaviour
 {
     public float moveSpeed;
+    public float hazardSpeed;
     public float dashTimer;
-    public float dashAmount;
+    public float dashSpeed;
 
     float currentSpeed;
     float timer = 0;
@@ -54,7 +55,7 @@ public class Player_Mover : MonoBehaviour
         //Player starts dashing IF they are not already dashing.
         if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift))
         {
-            currentSpeed = currentSpeed * dashAmount;
+            currentSpeed = dashSpeed;
             isDashing = true;
         }
 
@@ -76,13 +77,12 @@ public class Player_Mover : MonoBehaviour
         rb.velocity = input * currentSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Hazard" && !isDashing)
         {
             inHazard = true;
-            moveSpeed /= 2;
-            currentSpeed = moveSpeed;
+            currentSpeed = hazardSpeed;
         }
     }
 
@@ -91,7 +91,6 @@ public class Player_Mover : MonoBehaviour
         if (collision.gameObject.tag == "Hazard" && inHazard)
         {
             inHazard = false;
-            moveSpeed *= 2;
             currentSpeed = moveSpeed;
         }
     }
