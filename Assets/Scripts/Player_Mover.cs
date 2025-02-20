@@ -51,15 +51,18 @@ public class Player_Mover : MonoBehaviour
         animator.SetFloat("Vertical", verticalAnim);
         animator.SetBool("Dash", isDashing);
 
-        //For dash mechanic
+        //Player starts dashing IF they are not already dashing.
         if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift))
         {
             currentSpeed = currentSpeed * dashAmount;
             isDashing = true;
         }
 
+        //Begins the Dash timer immediately after the player starts dashing.
         if (isDashing)
             timer += Time.deltaTime;
+
+        //Once the timer has reached the dashTimer limit, they stop dashing, and the timer is reset.
         if (timer > dashTimer)
         {
             isDashing = false;
