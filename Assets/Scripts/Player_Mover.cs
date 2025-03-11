@@ -23,6 +23,8 @@ public class Player_Mover : MonoBehaviour
     float horizontalAnim = 0;
     Animator animator;
 
+    Vector3 lastLogPosition;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,8 +32,22 @@ public class Player_Mover : MonoBehaviour
         currentSpeed = moveSpeed;
     }
 
+    [System.Serializable]
+
+    public struct DashEventData
+    {
+        public Vector3 playerPos;
+        public bool isPlayerInHazard;
+    }
+
     void Update()
     {
+        if (Vector3.Distance(transform.position, lastLogPosition) > 1f)
+        {
+            TelemetryLogger.Log(this, "Move", transform.position);
+            lastLogPosition = transform.position;
+        }
+
         //Getting player input
         if (!isDashing)
         {
@@ -57,6 +73,14 @@ public class Player_Mover : MonoBehaviour
         {
             currentSpeed = dashSpeed;
             isDashing = true;
+
+            var data = new DashEventData()
+            {
+                playerPos = transform.position,
+                isPlayerInHazard = inHazard
+            };
+
+            TelemetryLogger.Log(this, "Dash", data);
         }
 
         //Begins the Dash timer immediately after the player starts dashing.
