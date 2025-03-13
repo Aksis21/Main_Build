@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_HP : MonoBehaviour
 {
@@ -16,13 +17,20 @@ public class Player_HP : MonoBehaviour
     Color damageLerp = Color.white;
     bool showDamage = false;
 
+    public Slider healthBar;
+    public Parry_Shield parryManager;
+
     private void Start()
     {
         playerRenderer = GetComponent<SpriteRenderer>();
+        healthBar.maxValue = HP;
     }
 
     void Update()
     {
+        //Update health bar
+        healthBar.value = HP;
+
         //Flash the player red upon taking damage.
         if (showDamage)
             damageLerp = Color.Lerp(Color.red, Color.white, invulTimer);
@@ -38,6 +46,10 @@ public class Player_HP : MonoBehaviour
 
             //If the player is dashing, they are temporarily invulnerable.
             invulnerable = gameObject.GetComponent<Player_Mover>().isDashing;
+
+            //If the player is parrying, they are temporarily invulnerable.
+            if (parryManager.isParrying)
+                invulnerable = true;
 
             //Stop updating the player color after taking damage.
             showDamage = false;

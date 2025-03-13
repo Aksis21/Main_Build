@@ -25,6 +25,9 @@ public class Player_Mover : MonoBehaviour
 
     Vector3 lastLogPosition;
 
+    public Parry_Shield energyManager;
+    bool canUseEnergy = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,6 +45,9 @@ public class Player_Mover : MonoBehaviour
 
     void Update()
     {
+        //Determine player's energy to see if they can dash or not
+        canUseEnergy = energyManager.canUseEnergy;
+
         if (Vector3.Distance(transform.position, lastLogPosition) > 1f)
         {
             TelemetryLogger.Log(this, "Move", transform.position);
@@ -69,7 +75,7 @@ public class Player_Mover : MonoBehaviour
         animator.SetBool("Dash", isDashing);
 
         //Player starts dashing IF they are not already dashing.
-        if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift))
+        if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift) && canUseEnergy)
         {
             currentSpeed = dashSpeed;
             isDashing = true;
