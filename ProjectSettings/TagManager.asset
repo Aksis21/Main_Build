@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Hazard
   - Parry Shield
+  - Projectile
+  - End
   layers:
   - Default
   - TransparentFX

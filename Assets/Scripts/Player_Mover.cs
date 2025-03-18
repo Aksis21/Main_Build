@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player_Mover : MonoBehaviour
 {
+    [Header("Player attributes")]
     public float moveSpeed;
     public float hazardSpeed;
     public float dashTimer;
@@ -12,11 +13,14 @@ public class Player_Mover : MonoBehaviour
 
     float currentSpeed;
     float timer = 0;
+    [Header("Do not change")]
     public bool isDashing = false;
     Rigidbody2D rb;
     Vector2 input;
 
     bool inHazard = false;
+    //STRICTLY for telemetry logging, do NOT use elsewhere
+    bool logCheckHazard = false;
 
     //floats for animator
     float verticalAnim = 0;
@@ -25,22 +29,18 @@ public class Player_Mover : MonoBehaviour
 
     Vector3 lastLogPosition;
 
+    Player_HP playerHP;
     public Parry_Shield energyManager;
     bool canUseEnergy = true;
 
+    bool gameOver = false;
+
     void Start()
     {
+        playerHP = GetComponent<Player_HP>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentSpeed = moveSpeed;
-    }
-
-    [System.Serializable]
-
-    public struct DashEventData
-    {
-        public Vector3 playerPos;
-        public bool isPlayerInHazard;
     }
 
     void Update()
@@ -48,14 +48,8 @@ public class Player_Mover : MonoBehaviour
         //Determine player's energy to see if they can dash or not
         canUseEnergy = energyManager.canUseEnergy;
 
-        if (Vector3.Distance(transform.position, lastLogPosition) > 1f)
-        {
-            TelemetryLogger.Log(this, "Move", transform.position);
-            lastLogPosition = transform.position;
-        }
-
         //Getting player input
-        if (!isDashing)
+        if (!isDashing && !gameOver)
         {
             input.y = Input.GetAxisRaw("Vertical");
 
@@ -75,18 +69,10 @@ public class Player_Mover : MonoBehaviour
         animator.SetBool("Dash", isDashing);
 
         //Player starts dashing IF they are not already dashing.
-        if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift) && canUseEnergy)
+        if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift) && canUseEnergy && !gameOver)
         {
             currentSpeed = dashSpeed;
             isDashing = true;
-
-            var data = new DashEventData()
-            {
-                playerPos = transform.position,
-                isPlayerInHazard = inHazard
-            };
-
-            TelemetryLogger.Log(this, "Dash", data);
         }
 
         //Begins the Dash timer immediately after the player starts dashing.
@@ -99,6 +85,23 @@ public class Player_Mover : MonoBehaviour
             isDashing = false;
             currentSpeed = moveSpeed;
             timer = 0;
+
+            /*
+            TELEMETRY LOG DATA
+            Located here:
+            2. Player exits dash in hazard
+            */
+
+            if (logCheckHazard)
+                TelemetryLogger.Log(this, "Exit dash in hazard");
+        }
+
+        //On WIN OR LOSS, DISABLE ALL MOVEMENT.
+        if (playerHP.win || playerHP.dead)
+        {
+            gameOver = true;
+            input.x = 0;
+            input.y = 0;
         }
     }
 
@@ -114,10 +117,15 @@ public class Player_Mover : MonoBehaviour
             inHazard = true;
             currentSpeed = hazardSpeed;
         }
+
+        if (collision.gameObject.tag == "Hazard")
+            logCheckHazard = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        logCheckHazard = false;
+
         if (collision.gameObject.tag == "Hazard" && inHazard)
         {
             inHazard = false;

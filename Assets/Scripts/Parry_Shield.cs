@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,14 +9,15 @@ public class Parry_Shield : MonoBehaviour
     CircleCollider2D parryCollider;
     SpriteRenderer shieldSprite;
 
-    public bool isParrying = false;
-
-    public GameObject player;
+    [Header("Player attributes")]
     public float maxParryEnergy;
     public float parryDrainRate;
     public float dashDrainRate;
     public float energyRechargeRate;
 
+    [Header("Do not change")]
+    public GameObject player;
+    public bool isParrying = false;
     public bool canUseEnergy = true;
     public float energy;
     public Slider energyDisplay;
@@ -76,5 +78,19 @@ public class Parry_Shield : MonoBehaviour
         energy += Time.deltaTime * energyRechargeRate;
 
         energyDisplay.value = energy;
+
+        /*
+        TELEMETRY LOG DATA
+        Located here:
+        1. Dash/Parry buttons pressed while out of energy
+        */
+
+        if (!canUseEnergy)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                TelemetryLogger.Log(this, "Attempted parry without energy");
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+                TelemetryLogger.Log(this, "Attempted dash without energy");
+        }
     }
 }
