@@ -64,6 +64,43 @@ public class Player_HP : MonoBehaviour
 
     void Update()
     {
+        /*
+        TELEMETRY LOG DATA
+        Located here:
+        3. How much damage does the player take each instance of being in the hazard?
+        5. How much damage was taken from projectiles vs. water hazard?
+        */
+
+        //Upon exiting the hazard, start counting up.
+        if (!inHazard)
+            timeOutOfHazard += Time.deltaTime;
+        //If re-enter hazard, reset log time.
+        if (inHazard)
+            timeOutOfHazard = 0f;
+
+        //If the script is primed to log and the player exits hazard for more than 0.5s, log damage taken from hazard.
+        if (timeOutOfHazard >= 0.5f && logHazardDamage)
+        {
+            if (damageTakenInHazard > 0)
+                TelemetryLogger.Log(this, "Damage taken in hazard", damageTakenInHazard);
+            damageTakenInHazard = 0f;
+            logHazardDamage = false;
+        }
+
+        if (dead && logTotalDamage)
+        {
+            var data = new DeathEventData()
+            {
+                hazardDMG = hazardDamageTaken,
+                projectileDMG = projectileDamageTaken
+            };
+            TelemetryLogger.Log(this, "Damage taken from each source", data);
+            logTotalDamage = false;
+        }
+        //
+        //END OF TELEMETRY
+        //
+
         //Update health bar
         healthBar.value = HP;
 
@@ -110,40 +147,6 @@ public class Player_HP : MonoBehaviour
             
         if (inHazard)
             takeDamage(hazardDamage);
-
-        /*
-        TELEMETRY LOG DATA
-        Located here:
-        3. How much damage does the player take each instance of being in the hazard?
-        5. How much damage was taken from projectiles vs. water hazard?
-        */
-
-        //Upon exiting the hazard, start counting up.
-        if (!inHazard)
-            timeOutOfHazard += Time.deltaTime;
-        //If re-enter hazard, reset log time.
-        if (inHazard)
-            timeOutOfHazard = 0f;
-
-        //If the script is primed to log and the player exits hazard for more than 0.5s, log damage taken from hazard.
-        if (timeOutOfHazard >= 0.5f && logHazardDamage)
-        {
-            if (damageTakenInHazard > 0)
-                TelemetryLogger.Log(this, "Damage taken in hazard", damageTakenInHazard);
-            damageTakenInHazard = 0f;
-            logHazardDamage = false;
-        }
-
-        if (dead && logTotalDamage)
-        {
-            var data = new DeathEventData()
-            {
-                hazardDMG = hazardDamageTaken,
-                projectileDMG = projectileDamageTaken
-            };
-            TelemetryLogger.Log(this, "Damage taken from each source", data);
-            logTotalDamage = false;
-        }
     }
 
     public void takeDamage(float damageTaken)
