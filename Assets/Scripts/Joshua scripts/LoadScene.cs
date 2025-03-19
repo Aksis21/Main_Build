@@ -10,6 +10,6 @@ public class LoadScene : MonoBehaviour
         if (string.IsNullOrWhiteSpace(sceneName))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         else
-            SceneManager.LoadScene(sceneName);        
+            SceneManager.LoadScene(sceneName);
     }
 }
