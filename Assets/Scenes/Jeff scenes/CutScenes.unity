@@ -1064,7 +1064,7 @@ PlayableDirector:
   - key: {fileID: 4068694351393331780, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
     value: {fileID: 2007372243}
   - key: {fileID: -1023535317571194272, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 1207714164}
+    value: {fileID: 0}
   - key: {fileID: -71893911706494164, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
     value: {fileID: 365051685}
   - key: {fileID: -33001368067024871, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
