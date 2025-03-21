@@ -32,6 +32,7 @@ public class EnemyMover1 : MonoBehaviour
     Vector3 destination;
     Vector3 moveDirection;
     Vector3 attackVector;
+    Vector3 chosenAttackVector;
 
     public PolygonCollider2D attackUp;
     public PolygonCollider2D attackRight;
@@ -85,15 +86,24 @@ public class EnemyMover1 : MonoBehaviour
         if (moving)
             rb.velocity = moveDirection * 10000;
         if (attackingPlayer)
-            rb.velocity = attackVector * 10000 * attackSpeed;
+            rb.velocity = chosenAttackVector * 10000 * attackSpeed;
     }
 
     void ApproachPlayer()
     {
         destination = player.transform.position;
 
+        //Rotate vision to always follow the player
+        float angle = Mathf.Atan2(player.transform.position.y - transform.position.y, player.transform.position.x - transform.position.x) * Mathf.Rad2Deg;
+        vision.eulerAngles = new Vector3(vision.rotation.x, vision.rotation.y, angle + 90);
+
         Vector3 chooseAttack = player.transform.position - transform.position;
-        if (chooseAttack.magnitude > attackRange || attackingPlayer) return;
+        if (chooseAttack.magnitude > attackRange || attackingPlayer)
+        {
+            moving = true;
+            countToAttack = 0f;
+            return;
+        }
         chooseAttack.Normalize();
 
         //Pick attack direction
@@ -105,22 +115,23 @@ public class EnemyMover1 : MonoBehaviour
 
     void AttackPlayer(string attackDirection)
     {
+        Debug.Log("Attacking " + attackDirection.ToString());
+
         moving = false;
         countToAttack += Time.deltaTime;
 
         attackVector = transform.position;
 
-        if (attackDirection == "Up") attackVector.y = transform.position.y + 5;
-        else if (attackDirection == "Down") attackVector.y = transform.position.y - 5;
-        else if (attackDirection == "Right") attackVector.x = transform.position.x + 5;
-        else if (attackDirection == "Left") attackVector.x = transform.position.x - 5;
+        if (attackDirection == "Up") attackVector.y += 5;
+        else if (attackDirection == "Down") attackVector.y -= 5;
+        else if (attackDirection == "Right") attackVector.x += 5;
+        else if (attackDirection == "Left") attackVector.x -= 5;
 
-        if (countToAttack < timeToAttack)
-        {
-            Debug.Log("attack player");
-            return;
-        }
+        if (countToAttack < timeToAttack) return;
 
+        chosenAttackVector = attackVector - transform.position;
+
+        Debug.Log("attack player");
         countToAttack = 0f;
         attackingPlayer = true;
     }

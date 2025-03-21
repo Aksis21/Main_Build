@@ -554,7 +554,7 @@ MonoBehaviour:
   timeToForgor: 5
   attackRange: 1.5
   timeToAttack: 1
-  attackSpeed: 2
+  attackSpeed: 10
   attackDuration: 0.2
   vision: {fileID: 134004217}
   attackUp: {fileID: 973368872}
