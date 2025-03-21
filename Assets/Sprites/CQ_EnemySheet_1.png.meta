@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f3a0d17dd5672d4d8cd0b2097126308
+guid: e2cc6001c68ef05469c8ee9614173c30
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mornel (1)_0
+      name: CQ_EnemySheet_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3de4d01c497abe448adc020568c00ad
-      internalID: 1509248991
+      spriteID: 0887d410397144a4facca51b1ca5ccc2
+      internalID: 1115393593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_1
+      name: CQ_EnemySheet_1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1693000e620e4244808c9f39b374895
-      internalID: 1738476250
+      spriteID: 36d6c865094ed574688054e501baacf3
+      internalID: 1313243609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_2
+      name: CQ_EnemySheet_1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b08706c408425dc4e9ff9097489c89e3
-      internalID: 2059893949
+      spriteID: 1052380f06463214ab7533e781422853
+      internalID: 482809103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_3
+      name: CQ_EnemySheet_1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47c517cd16b6074da776a673a30c93f
-      internalID: 1082793337
+      spriteID: 76476a7077f287e47afe92671ad730b2
+      internalID: 592072094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_4
+      name: CQ_EnemySheet_1_4
       rect:
         serializedVersion: 2
         x: 128
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f8f066fdc236614aace14b42d7d49cf
-      internalID: -922041978
+      spriteID: f529e83fd950b9d4eb101743609099b2
+      internalID: -112517842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_5
+      name: CQ_EnemySheet_1_5
       rect:
         serializedVersion: 2
         x: 160
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83c1da9856762a34a9263a0af083aa98
-      internalID: 122545960
+      spriteID: d0652b37543263d488e6803e47d31b67
+      internalID: -897539824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_6
+      name: CQ_EnemySheet_1_6
       rect:
         serializedVersion: 2
         x: 192
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aca13012a8553bd42b11d16c19bbe2ca
-      internalID: -2060694461
+      spriteID: b48f13c0b354b5948a1594a2cededa9b
+      internalID: -237783248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_7
+      name: CQ_EnemySheet_1_7
       rect:
         serializedVersion: 2
         x: 0
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2568fcd656e0e842b609accba32ee6f
-      internalID: 1643060748
+      spriteID: 4e5329abad5972c4c9ba09f536c71b87
+      internalID: 1700478977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_8
+      name: CQ_EnemySheet_1_8
       rect:
         serializedVersion: 2
         x: 32
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a032388aa0fcf8c4fba904d4ea8e18c7
-      internalID: 793954117
+      spriteID: e5f3f631adf9e9b4ea6f1d609569ca78
+      internalID: 1456057987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_9
+      name: CQ_EnemySheet_1_9
       rect:
         serializedVersion: 2
         x: 64
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0cb907d95261564498d2d2258d24374
-      internalID: -2044505717
+      spriteID: 590b87562358ee843ac4ac041a8d953d
+      internalID: 881607989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_10
+      name: CQ_EnemySheet_1_10
       rect:
         serializedVersion: 2
         x: 96
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86a6fdbb3d0de684bb91eee918f18bbf
-      internalID: -1561225195
+      spriteID: 01aed19043ac238478178a796aa1026c
+      internalID: 1696081873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_11
+      name: CQ_EnemySheet_1_11
       rect:
         serializedVersion: 2
         x: 128
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a1aad8ca04c6c44e89c1e087dd48d15
-      internalID: -688595195
+      spriteID: c760e0a35fd593646b1ee12b1e51567b
+      internalID: -1043582634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_12
+      name: CQ_EnemySheet_1_12
       rect:
         serializedVersion: 2
         x: 160
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f8506fbe7dfcb940ac0bc943e565a2f
-      internalID: 1909282729
+      spriteID: c0792f0bebb08bd4e88f8b55a03f5caa
+      internalID: -625008210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_13
+      name: CQ_EnemySheet_1_13
       rect:
         serializedVersion: 2
         x: 192
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec2e70cfbfff41e47ac43d92ab237ecf
-      internalID: -1981752564
+      spriteID: 7a2ba2cd44dff214bafc4041a6d54874
+      internalID: 1197494482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_14
+      name: CQ_EnemySheet_1_14
       rect:
         serializedVersion: 2
         x: 0
@@ -431,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74aca43e705f54c4985382837ba06866
-      internalID: 1997218454
+      spriteID: 08e804b42aeb6c94e998ef94c0441c87
+      internalID: 1075336920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_15
+      name: CQ_EnemySheet_1_15
       rect:
         serializedVersion: 2
         x: 32
@@ -452,14 +452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3cd26df8c62304db77cb5169cde950
-      internalID: -786202192
+      spriteID: 6a383a48eb5f35847a1962f82ca05c94
+      internalID: 1449442697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_16
+      name: CQ_EnemySheet_1_16
       rect:
         serializedVersion: 2
         x: 64
@@ -473,14 +473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5bf570c964ba649b28c51b22f71fe2
-      internalID: -562757022
+      spriteID: 5441d0bf766524f469524546cf39c590
+      internalID: -106719068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_17
+      name: CQ_EnemySheet_1_17
       rect:
         serializedVersion: 2
         x: 96
@@ -494,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e0e0c6e7d01734485d427ae33adb72
-      internalID: -186094514
+      spriteID: 57bd54f446e79274d84168954f402155
+      internalID: 998673816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_18
+      name: CQ_EnemySheet_1_18
       rect:
         serializedVersion: 2
         x: 128
@@ -515,14 +515,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73012dc87879f8b4b9c544ad39910b97
-      internalID: 191536904
+      spriteID: c6dfbbd5a6f7ca64e9ea65421708348a
+      internalID: -1335474703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_19
+      name: CQ_EnemySheet_1_19
       rect:
         serializedVersion: 2
         x: 160
@@ -536,14 +536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 861a705256799dc4ebe6e7c9d16e63ed
-      internalID: 408939158
+      spriteID: d507e442fb05268478ee24571de3d9be
+      internalID: 1103991012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_20
+      name: CQ_EnemySheet_1_20
       rect:
         serializedVersion: 2
         x: 192
@@ -557,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 917850e8558a76b4bb07b4d16391571f
-      internalID: 474790233
+      spriteID: 9210fe8facc9fa74ea2c4d949bad484e
+      internalID: 1315844064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_21
+      name: CQ_EnemySheet_1_21
       rect:
         serializedVersion: 2
         x: 0
@@ -578,14 +578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34fb3efba1cdd1142bc247733198da1c
-      internalID: 802871164
+      spriteID: 57d9dc9123f83b84381783dc0c7093e2
+      internalID: 2115779540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_22
+      name: CQ_EnemySheet_1_22
       rect:
         serializedVersion: 2
         x: 32
@@ -599,14 +599,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39e3ea93592239e40a4ca6a821883dbf
-      internalID: 2045816192
+      spriteID: fddab81d526549347a84401226833012
+      internalID: -398369305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_23
+      name: CQ_EnemySheet_1_23
       rect:
         serializedVersion: 2
         x: 64
@@ -620,14 +620,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e389cc9bd446e0e42b1c9e00c58adbb0
-      internalID: 1409001573
+      spriteID: 304112aa46ca972499ce05c8f10e7277
+      internalID: -1465122823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_24
+      name: CQ_EnemySheet_1_24
       rect:
         serializedVersion: 2
         x: 96
@@ -641,14 +641,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23e35835fc926024bae22dda7c124619
-      internalID: 199761765
+      spriteID: 5dfc45ade7a8f57498ad23574e26b3f7
+      internalID: 1926458246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_25
+      name: CQ_EnemySheet_1_25
       rect:
         serializedVersion: 2
         x: 128
@@ -662,14 +662,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eb6380dbcf9f404e9e171c0dc58521d
-      internalID: 77584040
+      spriteID: 004e1324d6eb62845aadbf0f9ea14088
+      internalID: -867074731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_26
+      name: CQ_EnemySheet_1_26
       rect:
         serializedVersion: 2
         x: 160
@@ -683,14 +683,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 458477f634031814988174dbe8389e52
-      internalID: -1836355420
+      spriteID: 32a49a77ca8d35441a1bfa2dace36a0b
+      internalID: 1748526780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mornel (1)_27
+      name: CQ_EnemySheet_1_27
       rect:
         serializedVersion: 2
         x: 192
@@ -704,8 +704,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d708d8778ce7d346951c9600f81d73d
-      internalID: 1141105028
+      spriteID: a91da7858038c474099c98cab93a9a2e
+      internalID: 1713505025
       vertices: []
       indices: 
       edges: []
@@ -721,34 +721,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mornel (1)_0: 1509248991
-      Mornel (1)_1: 1738476250
-      Mornel (1)_10: -1561225195
-      Mornel (1)_11: -688595195
-      Mornel (1)_12: 1909282729
-      Mornel (1)_13: -1981752564
-      Mornel (1)_14: 1997218454
-      Mornel (1)_15: -786202192
-      Mornel (1)_16: -562757022
-      Mornel (1)_17: -186094514
-      Mornel (1)_18: 191536904
-      Mornel (1)_19: 408939158
-      Mornel (1)_2: 2059893949
-      Mornel (1)_20: 474790233
-      Mornel (1)_21: 802871164
-      Mornel (1)_22: 2045816192
-      Mornel (1)_23: 1409001573
-      Mornel (1)_24: 199761765
-      Mornel (1)_25: 77584040
-      Mornel (1)_26: -1836355420
-      Mornel (1)_27: 1141105028
-      Mornel (1)_3: 1082793337
-      Mornel (1)_4: -922041978
-      Mornel (1)_5: 122545960
-      Mornel (1)_6: -2060694461
-      Mornel (1)_7: 1643060748
-      Mornel (1)_8: 793954117
-      Mornel (1)_9: -2044505717
+      CQ_EnemySheet_1_0: 1115393593
+      CQ_EnemySheet_1_1: 1313243609
+      CQ_EnemySheet_1_10: 1696081873
+      CQ_EnemySheet_1_11: -1043582634
+      CQ_EnemySheet_1_12: -625008210
+      CQ_EnemySheet_1_13: 1197494482
+      CQ_EnemySheet_1_14: 1075336920
+      CQ_EnemySheet_1_15: 1449442697
+      CQ_EnemySheet_1_16: -106719068
+      CQ_EnemySheet_1_17: 998673816
+      CQ_EnemySheet_1_18: -1335474703
+      CQ_EnemySheet_1_19: 1103991012
+      CQ_EnemySheet_1_2: 482809103
+      CQ_EnemySheet_1_20: 1315844064
+      CQ_EnemySheet_1_21: 2115779540
+      CQ_EnemySheet_1_22: -398369305
+      CQ_EnemySheet_1_23: -1465122823
+      CQ_EnemySheet_1_24: 1926458246
+      CQ_EnemySheet_1_25: -867074731
+      CQ_EnemySheet_1_26: 1748526780
+      CQ_EnemySheet_1_27: 1713505025
+      CQ_EnemySheet_1_3: 592072094
+      CQ_EnemySheet_1_4: -112517842
+      CQ_EnemySheet_1_5: -897539824
+      CQ_EnemySheet_1_6: -237783248
+      CQ_EnemySheet_1_7: 1700478977
+      CQ_EnemySheet_1_8: 1456057987
+      CQ_EnemySheet_1_9: 881607989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
