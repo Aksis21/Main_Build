@@ -10,12 +10,17 @@ public class EnemyMover1 : MonoBehaviour
     public float attackRange;
     public float timeToAttack;
     float countToForgor = 0f;
-    float timeUntilMove = 0f;
+    float timeUntilMove = float.PositiveInfinity;
     float countToAttack = 0f;
 
     [Header("Damage/Speed")]
+    public float patrolSpeed;
+    public float chaseSpeed;
     public float attackSpeed;
     public float attackDuration;
+    public float damage;
+    public float cooldownTime;
+    float timeToCooldown = 0f;
     float stopAttack = 0f;
 
     [Header("DO NOT CHANGE")]
@@ -26,6 +31,8 @@ public class EnemyMover1 : MonoBehaviour
     bool targetingPlayer = false;
     bool moving = true;
     bool attackingPlayer = false;
+    bool startAttacking = false;
+    bool cooldown = false;
 
     float direction;
     Rigidbody2D rb;
@@ -33,6 +40,12 @@ public class EnemyMover1 : MonoBehaviour
     Vector3 moveDirection;
     Vector3 attackVector;
     Vector3 chosenAttackVector;
+    string attackDirection;
+
+    //FOR ANIMATION PURPOSES ONLY.
+    Animator animator;
+    public float verticalAnim = 0f;
+    public float horizontalAnim = 0f;
 
     public PolygonCollider2D attackUp;
     public PolygonCollider2D attackRight;
@@ -45,6 +58,10 @@ public class EnemyMover1 : MonoBehaviour
         destination = transform.position;
         rb = GetComponent<Rigidbody2D>();
         detScript = GetComponent<DetectPlayer2>();
+        animator = GetComponent<Animator>();
+
+        MeleeAttack dmgDet = GetComponentInChildren<MeleeAttack>();
+        dmgDet.damage = damage;
 
         attackUp.enabled = false;
         attackRight.enabled = false;
@@ -54,11 +71,46 @@ public class EnemyMover1 : MonoBehaviour
 
     void Update()
     {
+        //FOR ANIMATION
+        verticalAnim = rb.velocity.y;
+        horizontalAnim = rb.velocity.x;
+
+        if (!startAttacking)
+        {
+            animator.SetFloat("Horizontal", horizontalAnim);
+            animator.SetFloat("Vertical", verticalAnim);
+        }
+
+        else if (startAttacking)
+        {
+            animator.SetFloat("Horizontal", chosenAttackVector.x);
+            animator.SetFloat("Vertical", chosenAttackVector.y);
+        }
+
+        animator.SetBool("Chase", targetingPlayer);
+        animator.SetBool("Attack", startAttacking);
+        animator.SetBool("Cooldown", cooldown);
+
+        //END OF ANIMATION STUFF
+
+        if (timeToCooldown > cooldownTime)
+        {
+            timeToCooldown = 0;
+            cooldown = false;
+        }
+        if (cooldown)
+        {
+            timeToCooldown += Time.deltaTime;
+            return;
+        }
+
         if (detScript.playerSpotted) targetingPlayer = true;
 
         moveDirection = destination - transform.position;
         if (!targetingPlayer) Patrol();
-        if (targetingPlayer) ApproachPlayer();
+
+        if (targetingPlayer && !startAttacking) ApproachPlayer();
+        if (startAttacking) AttackPlayer();
 
         if (!detScript.playerSpotted)
             countToForgor += Time.deltaTime;
@@ -75,16 +127,30 @@ public class EnemyMover1 : MonoBehaviour
             stopAttack += Time.deltaTime;
         if (stopAttack > attackDuration)
         {
+            attackUp.enabled = false;
+            attackRight.enabled = false;
+            attackDown.enabled = false;
+            attackLeft.enabled = false;
+
             moving = true;
+            startAttacking = false;
             attackingPlayer = false;
             stopAttack = 0f;
+
+            cooldown = true;
         }
     }
 
     private void FixedUpdate()
     {
-        if (moving)
-            rb.velocity = moveDirection * 10000;
+        if (cooldown) return;
+
+        moveDirection.Normalize();
+
+        if (moving && !targetingPlayer)
+            rb.velocity = moveDirection * 10000 * patrolSpeed;
+        if (moving && targetingPlayer)
+            rb.velocity = moveDirection * 10000 * chaseSpeed;
         if (attackingPlayer)
             rb.velocity = chosenAttackVector * 10000 * attackSpeed;
     }
@@ -107,13 +173,15 @@ public class EnemyMover1 : MonoBehaviour
         chooseAttack.Normalize();
 
         //Pick attack direction
-        if (chooseAttack.y >= Mathf.Abs(chooseAttack.x)) AttackPlayer("Up");
-        else if (Mathf.Abs(chooseAttack.y) >= Mathf.Abs(chooseAttack.x)) AttackPlayer("Down");
-        else if (chooseAttack.x > Mathf.Abs(chooseAttack.y)) AttackPlayer("Right");
-        else if (Mathf.Abs(chooseAttack.x) > Mathf.Abs(chooseAttack.y)) AttackPlayer("Left");
+        if (chooseAttack.y >= Mathf.Abs(chooseAttack.x)) attackDirection = "Up";
+        else if (Mathf.Abs(chooseAttack.y) >= Mathf.Abs(chooseAttack.x)) attackDirection = "Down";
+        else if (chooseAttack.x > Mathf.Abs(chooseAttack.y)) attackDirection = "Right";
+        else if (Mathf.Abs(chooseAttack.x) > Mathf.Abs(chooseAttack.y)) attackDirection = "Left";
+
+        startAttacking = true;
     }
 
-    void AttackPlayer(string attackDirection)
+    void AttackPlayer()
     {
         Debug.Log("Attacking " + attackDirection.ToString());
 
@@ -127,9 +195,14 @@ public class EnemyMover1 : MonoBehaviour
         else if (attackDirection == "Right") attackVector.x += 5;
         else if (attackDirection == "Left") attackVector.x -= 5;
 
+        chosenAttackVector = attackVector - transform.position;
+
         if (countToAttack < timeToAttack) return;
 
-        chosenAttackVector = attackVector - transform.position;
+        if (attackDirection == "Up") attackUp.enabled = true;
+        else if (attackDirection == "Down") attackDown.enabled = true;
+        else if (attackDirection == "Right") attackRight.enabled = true;
+        else if (attackDirection == "Left") attackLeft.enabled = true;
 
         Debug.Log("attack player");
         countToAttack = 0f;
