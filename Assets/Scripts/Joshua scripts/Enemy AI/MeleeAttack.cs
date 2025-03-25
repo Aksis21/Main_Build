@@ -8,6 +8,8 @@ public class MeleeAttack : MonoBehaviour
     public float damage;
     Player_HP playerHP;
 
+    public bool updateLog = true;
+
     private void Start()
     {
         playerHP = GameObject.Find("Player").GetComponent<Player_HP>();
@@ -18,6 +20,11 @@ public class MeleeAttack : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerHP.takeDamage(damage);
+
+            if (updateLog && !playerHP.invulnerable)
+                playerHP.meleeDamageTaken += damage;
+
+            updateLog = false;
         }
     }
 }

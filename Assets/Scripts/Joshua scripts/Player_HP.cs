@@ -44,6 +44,7 @@ public class Player_HP : MonoBehaviour
     [Header("TELEMETRY LOG VARIABLES")]
     public float hazardDamageTaken = 0f;
     public float projectileDamageTaken = 0f;
+    public float meleeDamageTaken = 0f;
 
     private void Start()
     {
@@ -60,6 +61,7 @@ public class Player_HP : MonoBehaviour
     {
         public float hazardDMG;
         public float projectileDMG;
+        public float meleeDMG;
     }
 
     void Update()
@@ -68,7 +70,7 @@ public class Player_HP : MonoBehaviour
         TELEMETRY LOG DATA
         Located here:
         3. How much damage does the player take each instance of being in the hazard?
-        5. How much damage was taken from projectiles vs. water hazard?
+        5. How much damage was taken from projectiles vs. water hazard vs. melee enemy?
         */
 
         //Upon exiting the hazard, start counting up.
@@ -92,7 +94,8 @@ public class Player_HP : MonoBehaviour
             var data = new DeathEventData()
             {
                 hazardDMG = hazardDamageTaken,
-                projectileDMG = projectileDamageTaken
+                projectileDMG = projectileDamageTaken,
+                meleeDMG = meleeDamageTaken
             };
             TelemetryLogger.Log(this, "Damage taken from each source", data);
             logTotalDamage = false;

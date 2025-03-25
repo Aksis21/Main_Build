@@ -42,6 +42,8 @@ public class EnemyMover1 : MonoBehaviour
     Vector3 chosenAttackVector;
     string attackDirection;
 
+    MeleeAttack dmgDet;
+
     //FOR ANIMATION PURPOSES ONLY.
     Animator animator;
     public float verticalAnim = 0f;
@@ -60,7 +62,7 @@ public class EnemyMover1 : MonoBehaviour
         detScript = GetComponent<DetectPlayer2>();
         animator = GetComponent<Animator>();
 
-        MeleeAttack dmgDet = GetComponentInChildren<MeleeAttack>();
+        dmgDet = GetComponentInChildren<MeleeAttack>();
         dmgDet.damage = damage;
 
         attackUp.enabled = false;
@@ -198,6 +200,9 @@ public class EnemyMover1 : MonoBehaviour
         chosenAttackVector = attackVector - transform.position;
 
         if (countToAttack < timeToAttack) return;
+
+        //FOR TELEMETRY
+        dmgDet.updateLog = true;
 
         if (attackDirection == "Up") attackUp.enabled = true;
         else if (attackDirection == "Down") attackDown.enabled = true;
