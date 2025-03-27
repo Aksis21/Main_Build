@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d262eec8b0d687841b27826a5acda801
+guid: 45b99f4c58c3d12478d090f83e3dbf41
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SMALL ITEAM_0
+      name: STONETALL_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 108
-        width: 16
-        height: 16
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea60ccbe6da1491498c79e6b8492c7ee
-      internalID: -61704131
+      spriteID: 7dbcfcd2bf2709647a54716d989a0b2a
+      internalID: 681592450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_1
+      name: STONETALL_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 108
-        width: 16
-        height: 16
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76fd85414ed2cfc4fab686530b00cab0
-      internalID: 2118463356
+      spriteID: fcc9c2d1c5e1d8545ae195468ebfb68d
+      internalID: 1371757206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_2
+      name: STONETALL_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 108
-        width: 16
-        height: 16
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 301f8a6116392e24b8e2a05763bcd883
-      internalID: -1921651081
+      spriteID: 5c65e0b9d5607044fbda3abf2ee8e978
+      internalID: 1043664917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_3
+      name: STONETALL_3
       rect:
         serializedVersion: 2
-        x: 49
-        y: 108
-        width: 16
-        height: 16
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c126b9dea9c16444947d479fb015f63
-      internalID: 1850550437
+      spriteID: 79220f53abf0ea34fbfbad86dabb173e
+      internalID: -238470057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_4
+      name: STONETALL_4
       rect:
         serializedVersion: 2
-        x: 65
-        y: 108
-        width: 16
-        height: 16
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6292fcb5eab56a3469304bfd7c97de68
-      internalID: -1146706407
+      spriteID: 327d464bf213b3340960fa679bf4fcd7
+      internalID: -1492576703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_5
+      name: STONETALL_5
       rect:
         serializedVersion: 2
-        x: 81
-        y: 108
-        width: 16
-        height: 16
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67adcb9c33a573841b0600a15a8675e5
-      internalID: -816165923
+      spriteID: 2f0d71fdd9c4e2d4faca6a16a7941049
+      internalID: -211888498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_6
+      name: STONETALL_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 92
-        width: 16
-        height: 16
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05cee61cc9949314cb76162742e50316
-      internalID: -1594414332
+      spriteID: b034e9d412887cf4ebcc5ac2a13c531d
+      internalID: 1896555986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_7
+      name: STONETALL_7
       rect:
         serializedVersion: 2
-        x: 17
-        y: 92
-        width: 16
-        height: 16
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 111a744300adb8b4f8791770a791550e
-      internalID: 133806404
+      spriteID: 8f30491c26dd79a4c98b3070ca61552e
+      internalID: 1843848954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_8
+      name: STONETALL_8
       rect:
         serializedVersion: 2
-        x: 33
-        y: 92
-        width: 16
-        height: 16
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 365b4663bf8331f4fb2e5345262700f4
-      internalID: 253538997
+      spriteID: 96bc5d9e0898c624f855fc360c12d654
+      internalID: -1113414138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_9
+      name: STONETALL_9
       rect:
         serializedVersion: 2
-        x: 49
-        y: 92
-        width: 16
-        height: 16
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3298f514a5883bd419cf0da8265b0da5
-      internalID: -1903111894
+      spriteID: 1349e05c012e8c34e81f8f50c0bdf00e
+      internalID: 931816663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_10
+      name: STONETALL_10
       rect:
         serializedVersion: 2
-        x: 65
-        y: 92
-        width: 16
-        height: 16
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,20 +360,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a9f50a26433124cab6142104ced23a
-      internalID: -162623654
+      spriteID: 420bbac98885ea04bbd2e8e0811e6594
+      internalID: 2022522547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_11
+      name: STONETALL_11
       rect:
         serializedVersion: 2
-        x: 81
-        y: 92
-        width: 16
-        height: 16
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d769b6e1e0e0f9d45948246fb6e80f07
-      internalID: 1841009037
+      spriteID: d81a89e8d98db09428d3da707353c937
+      internalID: 869955033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_12
+      name: STONETALL_12
       rect:
         serializedVersion: 2
-        x: 1
-        y: 76
-        width: 16
-        height: 16
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,20 +402,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 603b34ce0501c08429dfee3b8e66f7ae
-      internalID: -1937958878
+      spriteID: 02bb7882d3b30f245950112cbbc65d65
+      internalID: 1098589255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_13
+      name: STONETALL_13
       rect:
         serializedVersion: 2
-        x: 17
-        y: 76
-        width: 16
-        height: 16
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,20 +423,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a85f7119efeb7104fb56c5ff194c3961
-      internalID: -1368481466
+      spriteID: 76e977966f6c10a46ba1fc95914426ae
+      internalID: 794143178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMALL ITEAM_14
+      name: STONETALL_14
       rect:
         serializedVersion: 2
-        x: 33
-        y: 76
-        width: 16
-        height: 16
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,197 +444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f14b8e463d50d1c49b36b7b73596f4da
-      internalID: 1928758528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_15
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 76
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fbe53970ef404d49a6d9094a408fb7e
-      internalID: 1453689741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_16
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 60
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38bc9e5953281eb40875318666edd6e9
-      internalID: 1284317954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_17
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 60
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f442b679a9daf149a0fafafa7c9332a
-      internalID: 278653394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_18
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 60
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5d961c900c060f479af23430ac4b9ee
-      internalID: 23227132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_19
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 60
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08199163ec7ee3344b4b64a75f3d6b53
-      internalID: -750882175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_20
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 44
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 653f7bc631c045943ba318674f7bb50c
-      internalID: -1033007881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_21
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 44
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fbc9efe2c5fb774e9abc884abef7a4b
-      internalID: 2078567427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_22
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 28
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bde2ade1376cbe479161faced230ecd
-      internalID: 689661801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMALL ITEAM_23
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 28
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 542c16bad6a716a4fafadfd9c486a85f
-      internalID: 1772310651
+      spriteID: 4713ec30593c02142bc9efb70d106985
+      internalID: 766553619
       vertices: []
       indices: 
       edges: []
@@ -650,30 +461,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SMALL ITEAM_0: -61704131
-      SMALL ITEAM_1: 2118463356
-      SMALL ITEAM_10: -162623654
-      SMALL ITEAM_11: 1841009037
-      SMALL ITEAM_12: -1937958878
-      SMALL ITEAM_13: -1368481466
-      SMALL ITEAM_14: 1928758528
-      SMALL ITEAM_15: 1453689741
-      SMALL ITEAM_16: 1284317954
-      SMALL ITEAM_17: 278653394
-      SMALL ITEAM_18: 23227132
-      SMALL ITEAM_19: -750882175
-      SMALL ITEAM_2: -1921651081
-      SMALL ITEAM_20: -1033007881
-      SMALL ITEAM_21: 2078567427
-      SMALL ITEAM_22: 689661801
-      SMALL ITEAM_23: 1772310651
-      SMALL ITEAM_3: 1850550437
-      SMALL ITEAM_4: -1146706407
-      SMALL ITEAM_5: -816165923
-      SMALL ITEAM_6: -1594414332
-      SMALL ITEAM_7: 133806404
-      SMALL ITEAM_8: 253538997
-      SMALL ITEAM_9: -1903111894
+      STONETALL_0: 681592450
+      STONETALL_1: 1371757206
+      STONETALL_10: 2022522547
+      STONETALL_11: 869955033
+      STONETALL_12: 1098589255
+      STONETALL_13: 794143178
+      STONETALL_14: 766553619
+      STONETALL_2: 1043664917
+      STONETALL_3: -238470057
+      STONETALL_4: -1492576703
+      STONETALL_5: -211888498
+      STONETALL_6: 1896555986
+      STONETALL_7: 1843848954
+      STONETALL_8: -1113414138
+      STONETALL_9: 931816663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
