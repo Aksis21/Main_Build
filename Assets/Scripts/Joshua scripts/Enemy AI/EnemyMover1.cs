@@ -14,6 +14,9 @@ public class EnemyMover1 : MonoBehaviour
     float countToAttack = 0f;
 
     [Header("Damage/Speed")]
+    public float HP;
+    float hitTimer = float.PositiveInfinity;
+    SpriteRenderer sprite;
     public float patrolSpeed;
     public float chaseSpeed;
     public float attackSpeed;
@@ -61,6 +64,7 @@ public class EnemyMover1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         detScript = GetComponent<DetectPlayer2>();
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
 
         dmgDet = GetComponentInChildren<MeleeAttack>();
         dmgDet.damage = damage;
@@ -73,6 +77,10 @@ public class EnemyMover1 : MonoBehaviour
 
     void Update()
     {
+        hitTimer += Time.deltaTime;
+        sprite.color = Color.Lerp(Color.red, Color.white, hitTimer);
+        if (HP <= 0) Destroy(gameObject);
+
         //FOR ANIMATION
         verticalAnim = rb.velocity.y;
         horizontalAnim = rb.velocity.x;
@@ -250,5 +258,11 @@ public class EnemyMover1 : MonoBehaviour
             Debug.Log("move");
             timeUntilMove = 0f;
         }
+    }
+
+    public void Hit()
+    {
+        HP -= 1;
+        hitTimer = 0f;
     }
 }

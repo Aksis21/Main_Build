@@ -8,6 +8,8 @@ TagManager:
   - Parry Shield
   - Projectile
   - End
+  - MeleeEnemy
+  - RangedEnemy
   layers:
   - Default
   - TransparentFX

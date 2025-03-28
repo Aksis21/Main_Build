@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public Vector3 direction;
 
     public bool targetPlayer = true;
+    bool reflected = false;
 
     private void Start()
     {
@@ -38,9 +39,26 @@ public class Projectile : MonoBehaviour
         }
         if (collision.gameObject.tag == "Parry Shield")
         {
+            reflected = true;
             moveSpeed *= 1.5f;
             direction = transform.position - player.transform.position;
             direction.Normalize();
+        }
+
+        if (reflected)
+        {
+            if (collision.gameObject.tag == "MeleeEnemy")
+            {
+                EnemyMover1 melee = collision.gameObject.GetComponent<EnemyMover1>();
+                melee.Hit();
+                Destroy(gameObject);
+            }
+            if (collision.gameObject.tag == "RangedEnemy")
+            {
+                EnemyMover2 ranged = collision.gameObject.GetComponent<EnemyMover2>();
+                ranged.Hit();
+                Destroy(gameObject);
+            }
         }
     }
 }
