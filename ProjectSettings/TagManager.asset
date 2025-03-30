@@ -10,6 +10,7 @@ TagManager:
   - End
   - MeleeEnemy
   - RangedEnemy
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
+  - MeleeEnemy
+  - RangedEnemy
+  - Wall
   - 
   - 
   - 

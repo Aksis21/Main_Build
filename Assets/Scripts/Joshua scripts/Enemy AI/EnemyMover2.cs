@@ -24,6 +24,9 @@ public class EnemyMover2 : MonoBehaviour
     public GameObject projectile;
     DetectPlayer2 detScript;
     GameObject player;
+
+    public float disableRange;
+    public float currentDisableRange;
     
     float timeUntilLook = 0f;
     float hitTimer = float.PositiveInfinity;
@@ -59,6 +62,11 @@ public class EnemyMover2 : MonoBehaviour
 
     void Update()
     {
+        //DISABLE ENEMY PAST DISABLE RANGE
+        Vector3 disable = player.transform.position - transform.position;
+        currentDisableRange = disable.magnitude;
+        if (currentDisableRange > disableRange) return;
+
         hitTimer += Time.deltaTime;
         sprite.color = Color.Lerp(Color.red, Color.white, hitTimer);
         if (HP <= 0) Destroy(gameObject);
@@ -111,6 +119,9 @@ public class EnemyMover2 : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //DISABLE AT DISABLE RANGE
+        if (currentDisableRange > disableRange) return;
+
         if (!moving) return;
 
         moveDirection.Normalize();
