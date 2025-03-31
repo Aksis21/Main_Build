@@ -30,6 +30,7 @@ public class EnemyMover1 : MonoBehaviour
     public Transform vision;
     DetectPlayer2 detScript;
     GameObject player;
+    Player_HP playerScript;
 
     public float disableRange;
     public float currentDisableRange;
@@ -63,6 +64,8 @@ public class EnemyMover1 : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
+        playerScript = player.GetComponent<Player_HP>();
+
         destination = transform.position;
         rb = GetComponent<Rigidbody2D>();
         detScript = GetComponent<DetectPlayer2>();
@@ -88,6 +91,10 @@ public class EnemyMover1 : MonoBehaviour
         hitTimer += Time.deltaTime;
         sprite.color = Color.Lerp(Color.red, Color.white, hitTimer);
         if (HP <= 0) Destroy(gameObject);
+
+        //HORDE DETECTION
+        Vector3 alertDetect = player.transform.position - transform.position;
+        if (playerScript.detected && alertDetect.magnitude < 5) targetingPlayer = true;
 
         //FOR ANIMATION
         verticalAnim = rb.velocity.y;

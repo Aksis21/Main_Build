@@ -35,6 +35,9 @@ public class Player_HP : MonoBehaviour
 
     public bool dead = false;
     public bool win = false;
+    public bool detected = false;
+    float hiddenTime = 0f;
+    float damageAlert = 0f;
 
     //STRICTLY FOR TELEMETRY DATA, DO NOT USE ELSEWHERE
     float damageTakenInHazard = 0f;
@@ -126,9 +129,23 @@ public class Player_HP : MonoBehaviour
 
         //Flash the player red upon taking damage.
         if (showDamage)
+        {
             damageLerp = Color.Lerp(Color.red, Color.white, invulTimer);
-        playerRenderer.color = damageLerp;
+            damageAlert = 0f;
+        }
 
+        //Player flashes red if they are low HP
+        if (HP <= 3 && !showDamage)
+        {
+            if (HP == 3 || HP == 2) damageAlert += Time.deltaTime;
+            if (HP == 1) damageAlert += Time.deltaTime * 2;
+            damageLerp = Color.Lerp(Color.red, Color.white, damageAlert);
+            if (damageAlert >= 1) damageAlert = 0f;
+        }
+        if (HP > 4) damageAlert = 0f;
+        
+        playerRenderer.color = damageLerp;
+        
         //invulTimer keeps climbing. If reset to zero, the player receives "iFrames" and is temporarily invulnerable.
         if (invulTimer <= 0)
             invulnerable = true;
@@ -150,6 +167,13 @@ public class Player_HP : MonoBehaviour
             
         if (inHazard)
             takeDamage(hazardDamage);
+
+        if (detected) hiddenTime += Time.deltaTime;
+        if (hiddenTime > 1)
+        {
+            detected = false;
+            hiddenTime = 0;
+        }
     }
 
     public void takeDamage(float damageTaken)

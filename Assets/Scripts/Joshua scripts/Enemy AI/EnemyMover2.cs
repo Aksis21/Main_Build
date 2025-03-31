@@ -24,6 +24,7 @@ public class EnemyMover2 : MonoBehaviour
     public GameObject projectile;
     DetectPlayer2 detScript;
     GameObject player;
+    Player_HP playerScript;
 
     public float disableRange;
     public float currentDisableRange;
@@ -49,10 +50,12 @@ public class EnemyMover2 : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("Player");
+        playerScript = player.GetComponent<Player_HP>();
+
         rb = GetComponent<Rigidbody2D>();
         detScript = GetComponent<DetectPlayer2>();
         destination = transform.position;
-        player = GameObject.Find("Player");
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
@@ -70,6 +73,10 @@ public class EnemyMover2 : MonoBehaviour
         hitTimer += Time.deltaTime;
         sprite.color = Color.Lerp(Color.red, Color.white, hitTimer);
         if (HP <= 0) Destroy(gameObject);
+
+        //HORDE DETECTION
+        Vector3 alertDetect = player.transform.position - transform.position;
+        if (playerScript.detected && alertDetect.magnitude < 5) targetingPlayer = true;
 
         //FOR ANIMATION
         animator.SetBool("Attack", attacking);
