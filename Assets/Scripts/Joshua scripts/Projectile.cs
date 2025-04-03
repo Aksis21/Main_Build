@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [Header("DO NOT CHANGE ANYTHING")]
     public float moveSpeed = 1f;
     GameObject player;
     Player_HP playerHP;
@@ -11,6 +12,7 @@ public class Projectile : MonoBehaviour
 
     public bool targetPlayer = true;
     bool reflected = false;
+    public float invulOnSpawn = 0f;
 
     private void Start()
     {
@@ -26,12 +28,13 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        invulOnSpawn += Time.deltaTime;
         transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall") Destroy(gameObject);
+        if (collision.gameObject.tag == "Wall" && invulOnSpawn > 0.05f) Destroy(gameObject);
         if (collision.gameObject.tag == "Player")
         {
             playerHP.takeDamage(playerHP.projectileDamage);

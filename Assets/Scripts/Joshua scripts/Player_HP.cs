@@ -16,6 +16,10 @@ public class Player_HP : MonoBehaviour
     [Header("Set damage values")]
     public float hazardDamage;
     public float projectileDamage;
+    public float spikeDamage = 1f;
+    public float healthkitRegen = 3f;
+    bool regeneratingHP = false;
+    float regenTime = float.PositiveInfinity;
 
     [Header("Do not change")]
     public bool invulnerable;
@@ -69,6 +73,8 @@ public class Player_HP : MonoBehaviour
 
     void Update()
     {
+        if (HP > 10) HP = 10;
+
         /*
         TELEMETRY LOG DATA
         Located here:
@@ -134,8 +140,16 @@ public class Player_HP : MonoBehaviour
             damageAlert = 0f;
         }
 
+        //Flash the player green upon regenerating HP.
+        if (regeneratingHP)
+        {
+            regenTime += Time.deltaTime;
+            damageLerp = Color.Lerp(Color.green, Color.white, regenTime);
+            if (regenTime > 1) regeneratingHP = false;
+        }
+
         //Player flashes red if they are low HP
-        if (HP <= 3 && !showDamage)
+        if (HP <= 3 && !showDamage && !regeneratingHP)
         {
             if (HP == 3 || HP == 2) damageAlert += Time.deltaTime;
             if (HP == 1) damageAlert += Time.deltaTime * 2;
@@ -174,6 +188,14 @@ public class Player_HP : MonoBehaviour
             detected = false;
             hiddenTime = 0;
         }
+    }
+
+    public void healthRegen()
+    {
+        invulTimer = 0f;
+        HP += healthkitRegen;
+        regenTime = 0f;
+        regeneratingHP = true;
     }
 
     public void takeDamage(float damageTaken)
