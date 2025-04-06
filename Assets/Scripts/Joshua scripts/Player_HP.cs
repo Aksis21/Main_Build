@@ -126,7 +126,7 @@ public class Player_HP : MonoBehaviour
         {
             winLossText.text = "You died";
             dead = true;
-            fade.color = new Color(0.2f, 0.2f, 0.2f, 0.5f);
+            fade.color = new Color(0f, 0f, 0f, 0.8f);
             restartBut.enabled = true;
             restartCol.color = new Color(1, 1, 1, 1);
             restartText.text = "Restart";

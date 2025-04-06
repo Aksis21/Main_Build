@@ -14,6 +14,7 @@ public class Player_Mover : MonoBehaviour
     float currentSpeed;
     float timer = 0;
     [Header("Do not change")]
+    public bool canDash = false;
     public bool isDashing = false;
     Rigidbody2D rb;
     Vector2 input;
@@ -69,7 +70,7 @@ public class Player_Mover : MonoBehaviour
         animator.SetBool("Dash", isDashing);
 
         //Player starts dashing IF they are not already dashing.
-        if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift) && canUseEnergy && !gameOver)
+        if (!isDashing && Input.GetKeyDown(KeyCode.LeftShift) && canUseEnergy && !gameOver && canDash)
         {
             currentSpeed = dashSpeed;
             isDashing = true;

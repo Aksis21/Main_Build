@@ -16,6 +16,7 @@ public class Parry_Shield : MonoBehaviour
     public float energyRechargeRate;
 
     [Header("Do not change")]
+    public bool canParry = false;
     public GameObject player;
     public bool isParrying = false;
     public bool canUseEnergy = true;
@@ -32,10 +33,13 @@ public class Parry_Shield : MonoBehaviour
         shieldSprite = GetComponent<SpriteRenderer>();
         energy = maxParryEnergy;
         energyDisplay.maxValue = maxParryEnergy;
+        energyDisplay.value = maxParryEnergy;
     }
 
     void Update()
     {
+        if (!canParry) return;
+
         transform.position = player.transform.position;
 
         //Clamp the parry energy between 0 and the max possible parry energy (set in editor)
