@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
     public string scenesName;
-
+    [SerializeField] float time;
     private void Start()
     {
         StartCoroutine(changeScene());
@@ -16,7 +16,7 @@ public class ChangeScenes : MonoBehaviour
     
     IEnumerator changeScene()
     {
-        yield return new WaitForSeconds(18f);
+        yield return new WaitForSeconds(time);
         SceneManager.LoadScene(scenesName);
     }
    
