@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Message_Display : MonoBehaviour
 {
+    public GameObject messageBG;
+    public GameObject messageBorder;
+
     TextMeshProUGUI textDisplay;
     GameObject fade;
     GameObject button;
@@ -22,6 +25,8 @@ public class Message_Display : MonoBehaviour
 
         textDisplay.enabled = false;
         panelImage.enabled = false;
+        messageBG.SetActive(false);
+        messageBorder.SetActive(false);
         button.SetActive(false);
     }
 
@@ -30,6 +35,8 @@ public class Message_Display : MonoBehaviour
         panelImage.enabled = true;
         button.SetActive(true);
         textDisplay.enabled = true;
+        messageBG.SetActive(true);
+        messageBorder.SetActive(true);
         fadeImage.color = new Color(0f, 0f, 0f, 0.8f);
         Time.timeScale = 0f;
     }
@@ -39,6 +46,8 @@ public class Message_Display : MonoBehaviour
         panelImage.enabled = false;
         button.SetActive(false);
         textDisplay.enabled = false;
+        messageBG.SetActive(false);
+        messageBorder.SetActive(false);
         fadeImage.color = new Color(0f, 0f, 0f, 0f);
         Time.timeScale = 1f;
     }
