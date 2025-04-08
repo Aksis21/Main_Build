@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 365051686}
   - component: {fileID: 365051685}
   m_Layer: 5
-  m_Name: spaceshipwoap
+  m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 839952607, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12a5458841d784448871e51232cb27f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 755681007}
   - component: {fileID: 755681006}
   m_Layer: 5
-  m_Name: closespaceship
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,7 +524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1084, y: 0}
+  m_AnchoredPosition: {x: -0.00012207, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &755681006
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 396946516, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5dcf9a3a8c6e41e4ebe3e96c9b9ee9c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 1191140771}
   - component: {fileID: 1191140770}
   m_Layer: 5
-  m_Name: starboom
+  m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 508296886, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df6368bc3c1426d4683cea8379e26fc2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 1207714165}
   - component: {fileID: 1207714164}
   m_Layer: 5
-  m_Name: text
+  m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2094375609, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffe4b103b8b078541908f15d1ef653a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 1267224795}
   - component: {fileID: 1267224794}
   m_Layer: 5
-  m_Name: spaceshiponstar
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 346353196, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0a703cb5a16d2f4a832df2471c1ca85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 1329022384}
   - component: {fileID: 1329022383}
   m_Layer: 5
-  m_Name: spaceshipSawStar
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2069799645, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2a55578e936aba479ece40b5ebc84db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1050,25 +1050,7 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 58903831949936210, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 1677498912}
-  - key: {fileID: 6830568926619757288, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 755681006}
-  - key: {fileID: 2796664653835355385, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 1785035498}
-  - key: {fileID: -4015554916366972478, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 1329022383}
-  - key: {fileID: 5081549326720574771, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 1267224794}
-  - key: {fileID: 4068694351393331780, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 2007372243}
-  - key: {fileID: -1023535317571194272, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -71893911706494164, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 365051685}
-  - key: {fileID: -33001368067024871, guid: e0e838df9e6c19e49bac6acc5aca27df, type: 2}
-    value: {fileID: 1191140770}
+  m_SceneBindings: []
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1490930473
@@ -1099,7 +1081,7 @@ GameObject:
   - component: {fileID: 1677498910}
   - component: {fileID: 1677498912}
   m_Layer: 5
-  m_Name: farSpaceShip
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1144,7 +1126,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1378266226, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d03d8dd564f2a64798f512e60ab385a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1196,7 +1178,7 @@ GameObject:
   - component: {fileID: 1785035499}
   - component: {fileID: 1785035498}
   m_Layer: 5
-  m_Name: sleeplyBoy
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1262,7 +1244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -311278903, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59df5eb031fdfba4a90988c4683187e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1293,7 +1275,7 @@ GameObject:
   - component: {fileID: 2007372244}
   - component: {fileID: 2007372243}
   m_Layer: 5
-  m_Name: yaboy
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1359,7 +1341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1739054063, guid: 8bdb276531fc2244790c1410a77ee531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51739ca812bc7fe43ae2395eeaa0cb31, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
