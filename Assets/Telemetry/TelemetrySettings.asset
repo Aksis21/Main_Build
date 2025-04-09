@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa188ed3cd5ee314b91a17c5c707da0a, type: 3}
   m_Name: TelemetrySettings
   m_EditorClassIdentifier: 
-  userName: Studio Poutine
-  secret: universe stocking
+  userName: james22
+  secret: 991722832
   _version: 1.0
   _serverURL: https://telemetry-dg-13578a3082a2.herokuapp.com/
   serverCommunication: 1
