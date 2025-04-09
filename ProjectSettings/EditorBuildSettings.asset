@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Joshua scenes/Start scene.unity
-    guid: 145ad6f93f8aff64b8a2408b88ecc001
+    path: Assets/Scenes/Jeff scenes/Start.unity
+    guid: 73b9d7681a9bde844a662ec342abf69c
   - enabled: 1
     path: Assets/Scenes/Jeff scenes/CutScenes.unity
     guid: 120b5b7beeb441c4190ed1e50cd8da95
