@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesName: Ending
-  time: 8
+  time: 9
 --- !u!4 &1126932862
 Transform:
   m_ObjectHideFlags: 0

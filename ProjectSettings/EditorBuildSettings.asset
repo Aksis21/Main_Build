@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Joshua scenes/Start scene.unity
     guid: 145ad6f93f8aff64b8a2408b88ecc001
   - enabled: 1
-    path: Assets/Scenes/Joshua scenes/Greybox.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Jeff scenes/CutScenes.unity
     guid: 120b5b7beeb441c4190ed1e50cd8da95
   - enabled: 1
     path: Assets/Scenes/Jeff scenes/copy.unity
     guid: 518cc25f472fb084990c6f42bf3b4c0c
+  - enabled: 1
+    path: Assets/Scenes/Jeff scenes/endingcut.unity
+    guid: 5243e6ecd0d14dc4d9b42fc93daa2039
   - enabled: 1
     path: Assets/Scenes/Jeff scenes/Ending.unity
     guid: c6c66d21cf42cc24483accd0a2453ac3

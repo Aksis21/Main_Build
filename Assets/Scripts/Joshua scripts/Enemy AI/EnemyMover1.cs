@@ -176,11 +176,11 @@ public class EnemyMover1 : MonoBehaviour
         moveDirection.Normalize();
 
         if (moving && !targetingPlayer)
-            rb.velocity = moveDirection * 10000 * patrolSpeed;
+            rb.velocity = moveDirection /** 10000*/ * patrolSpeed;
         if (moving && targetingPlayer)
-            rb.velocity = moveDirection * 10000 * chaseSpeed;
+            rb.velocity = moveDirection /** 10000*/ * chaseSpeed;
         if (attackingPlayer)
-            rb.velocity = chosenAttackVector * 10000 * attackSpeed;
+            rb.velocity = chosenAttackVector /** 10000*/ * attackSpeed;
     }
 
     void ApproachPlayer()
